@@ -40,9 +40,9 @@
         "test:coverage": "vitest --coverage",
         "release": "pnpm run build && pnpm changeset publish"
     },
-    "repository": "",
-    "bugs": "",
-    "homepage": "",
+    "repository": "https://github.com/nodecfdi/cfdiutils",
+    "bugs": "https://github.com/nodecfdi/cfdi-validator/issues",
+    "homepage": "https://github.com/nodecfdi/cfdiutils",
     "devDependencies": {
         "@changesets/cli": "^2.26.0",
         "@commitlint/cli": "^17.3.0",
