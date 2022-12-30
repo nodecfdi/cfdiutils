@@ -32,8 +32,10 @@
         "lint": "eslint --fix --ext .js,.ts .",
         "lint:check": "eslint --ext .js,.ts .",
         "format": "prettier --write \"**/*.{js,ts,json}\"",
+        "type:check": "api-extractor run --local --verbose",
         "prebuild": "rimraf dist",
         "prepare": "is-ci || husky install",
+        "gen:docs": "rimraf docs && typedoc --options typedoc.cjs",
         "test": "vitest",
         "test:coverage": "vitest --coverage",
         "release": "pnpm run build && pnpm changeset publish"
@@ -44,6 +46,7 @@
     "devDependencies": {
         "@changesets/cli": "^2.26.0",
         "@commitlint/cli": "^17.3.0",
+        "@microsoft/api-extractor": "^7.33.7",
         "@nrsk/config-conventional": "^1.0.0",
         "@types/is-ci": "^3.0.0",
         "@types/node": "^18.11.18",
@@ -59,6 +62,8 @@
         "rimraf": "^3.0.2",
         "tsup": "^6.5.0",
         "tsx": "^3.12.1",
+        "typedoc": "^0.23.23",
+        "typedoc-theme-hierarchy": "^3.0.0",
         "typescript": "^4.9.4",
         "vitest": "^0.26.2"
     },
