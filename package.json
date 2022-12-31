@@ -37,7 +37,8 @@
         "prepare": "is-ci || husky install",
         "gen:docs": "rimraf docs && typedoc --options typedoc.cjs",
         "test": "vitest",
-        "test:coverage": "vitest --coverage",
+        "test:run": "vitest run",
+        "test:coverage": "vitest run --coverage",
         "release": "pnpm run build && pnpm changeset publish"
     },
     "repository": "https://github.com/nodecfdi/cfdiutils",
@@ -53,8 +54,12 @@
         "@typescript-eslint/eslint-plugin": "^5.47.1",
         "@typescript-eslint/parser": "^5.47.1",
         "@vitest/coverage-istanbul": "^0.26.2",
+        "@xmldom/xmldom": "^0.8.6",
         "eslint": "^8.30.0",
         "eslint-config-prettier": "^8.5.0",
+        "eslint-config-xo": "^0.43.1",
+        "eslint-config-xo-typescript": "^0.55.1",
+        "eslint-plugin-unicorn": "^45.0.2",
         "husky": "^8.0.2",
         "is-ci": "^3.0.1",
         "lint-staged": "^13.1.0",
@@ -63,8 +68,9 @@
         "tsup": "^6.5.0",
         "tsx": "^3.12.1",
         "typedoc": "^0.23.23",
-        "typedoc-theme-hierarchy": "^3.0.0",
+        "typedoc-theme-hierarchy": "^3.0.2",
         "typescript": "^4.9.4",
+        "vite": "^4.0.3",
         "vitest": "^0.26.2"
     },
     "commitlint": {
@@ -82,5 +88,8 @@
     },
     "engines": {
         "node": "^14.16.0 || ^16.10.0 || ^18.0.0"
+    },
+    "dependencies": {
+        "@nodecfdi/cfdiutils-common": "^1.2.1"
     }
 }
