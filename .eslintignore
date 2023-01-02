@@ -3,6 +3,5 @@ coverage
 dist
 
 # Config files
-
 tsup.config.ts
 vite.config.ts
